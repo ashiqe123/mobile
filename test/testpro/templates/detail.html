@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+
+{{mobile.type}}<br><br>
+<img src="{{mobile.img.url}}" ><br>
+{{mobile.brand}}<br><br>
+{{mobile.model}}<br><br>
+{{mobile.desc}}<br>
+<a class="btn btn-warning" href="{% url 'testapp:update' mobile.id %}">update</a>
+<a class="btn btn-danger" href="{% url 'testapp:delete' mobile.id %}">delete</a>
+{% endblock %}
